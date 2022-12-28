@@ -1,12 +1,14 @@
+import { Suspense } from "react";
+
+import FeaturedCollections from "../components/FeaturedCollections.server";
+import { Layout } from "../components/Layout.server";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello world!</h1>
-      <p>Welcome to Hydrogen.</p>
-      <p>
-        Hydrogen is a front-end web development framework used for building
-        Shopify custom storefronts.
-      </p>
-    </div>
+    <Layout>
+      <Suspense>
+        <FeaturedCollections />
+      </Suspense>
+    </Layout>
   );
 }
