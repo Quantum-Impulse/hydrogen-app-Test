@@ -6,6 +6,7 @@ export default function FeaturedCollections() {
   } = useShopQuery({
     query: QUERY,
     cache: CacheLong(),
+    preload: false
   });
 
   return (
