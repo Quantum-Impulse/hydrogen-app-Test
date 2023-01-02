@@ -21,20 +21,21 @@ export default function ProductCard({ product }) {
             alt="Alt Tag"
           />
         </div>
-        <div className="grid gap-1">
+        <div className="grid gap-1"> 
           <h3 className="max-w-prose text-copy w-full overflow-hidden whitespace-nowrap text-ellipsis ">
             {product.title}
           </h3>
           <div className="flex gap-4">
-            <span className="max-w-prose whitespace-pre-wrap inherit text-copy flex gap-4">
-              <Money withoutTrailingZeros data={price} />
-              {isDiscounted && (
+            <span className="max-w-prose whitespace-pre-wrap inherit text-copy flex gap-2">
+            {isDiscounted && (
                 <Money
                   className="line-through opacity-50"
                   withoutTrailingZeros
                   data={compareAtPrice}
                 />
               )}
+              <Money withoutTrailingZeros data={price} />
+             
             </span>
           </div>
         </div>
